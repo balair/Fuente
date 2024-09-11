@@ -1,0 +1,327 @@
+/*-----------------------------------------------------PUEDO EMPEZAR A HACER LAS FUNCIONES EN ESTA PARTE, ANIMACIONES ETC------------------------------------------------*/
+/*------------------------------------------------------------------------ MANEJO DE IMAGENES ---------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------COMIENZO DE HEADER, HAY QUE RETOCAR DESPUES-----------------------------------------------------------------------*/
+.header{
+    background: linear-gradient(to bottom, rgba(8, 163, 253, 0.993), #ffff);
+    height: 100px;
+}
+#logo{
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 50px;
+}
+#logo img{
+    width: 100px;
+    border-radius: 100px;
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    left: -40px;
+}
+/*----------------------------------------------------------COMIENZO DE DROPDOWN MENU (OBSOLETO)---------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------COMIENZO DE LOGIN-------------------------------------------------------------------------------------------*/
+.login{
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 10px 16px 10px rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+.login-form input{
+    color: rgb(3, 0, 0);
+    margin: 5px;
+    text-align: center;
+}
+.log-in-button{
+    text-align: center;
+    padding: 4px;
+    margin: 3px;
+}
+.error{
+    padding: 3px;
+    background-color: rgba(255, 0, 0, 0.671);
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    text-align: center;
+}
+.alert{
+    padding: 3px;
+    background-color: rgba(84, 245, 103, 0.876);
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------- MAIN PAGE --------------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap);
+.optn-menu{/*ESTO ACTUA COMO CONTENEDOR DE MI FLEXBOX*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blue;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    align-items: center;*/
+}
+.optn-item{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: width 0.5s, background-color 0.5s, box-shadow 0.5s, height 0.5s, cursor 0.0s;
+}
+.optn-item a{
+    text-decoration: none;
+    font-family:'Libre Franklin', sans-serif;
+    padding-top: 5px;
+    padding-left: 2px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+.optn-item:hover{
+    width: 180px;
+    height: 100px;
+    background-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 6px 7px 4px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+/*--------------------------------------------------HOVER EN BOTONES DE PAGINA MAIN-------------------------------------------------------------------------*/
+.dropdwn-display{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    width: 30%;
+    top: 99%;
+    left: 74%;
+    cursor: default;
+}
+
+.dropdwn-item-s{
+    display: block;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: height 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+.dropdwn-item-s:hover{
+    height: 100px;
+    background-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 6px 7px 4px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.optn-item:hover .dropdwn-display{
+    display: block;
+    top: 99%;
+}
+/*-------------------------------------------------------------OPCIONES DE USUARIOS Y CARGAS (FORMS)---------------------------------------------------------------------------------*/
+.form-data{
+    background-color: aqua;
+    position: absolute;
+    top: 290px;
+    left: 299px;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    padding-bottom: 15px;
+    font-family:'Libre Franklin', sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 16px 10px rgb(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: large;
+}
+.form-type-s{
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5%;
+    padding-bottom: 10%;
+    font-family:'Libre Franklin', sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 16px 10px rgb(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: large;
+}
+.form-data-f1{
+    background-color: red;
+    /*position: absolute;*/
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 6px 2px rgba(161, 228, 243, 0.763);
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+    padding: 5%;
+    font-size: small;
+}
+.users{
+    text-decoration: none;
+    display: block;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white
+}
+.users:hover{
+    background-color: rgba(0, 113, 154, 0.585);
+    color: white;
+}
+.input-form{
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-bottom: 10px;
+    height: 18px;
+}
+.input-form-incident{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 10%;
+}
+.divisores{
+    position: absolute;
+    background-color: black;
+    width: 51.5%;
+    top: 230px;
+    left: 295px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family:'Libre Franklin', sans-serif;
+    font-size: large;
+    margin: 4px;
+    color: white;
+    box-shadow: 10px 0px 10px rgb(0, 0, 0, 0.6);
+}
+.divisor-b{
+    background-color: black;
+    position: absolute;
+    top: 1%;
+    left: 49.6%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family:'Libre Franklin', sans-serif;
+    font-size: large;
+    margin: 4px;
+    color: white;
+    box-shadow: 10px 0px 10px rgb(0, 0, 0, 0.6);
+    width: 100.5%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    padding-top: 10px;
+}
+
+.buttons-a{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.btn-save{
+    font-family:'Libre Franklin', sans-serif;
+    font-size: small;
+    border-radius: 5px;
+    text-align: center;
+    padding: 3px;
+    border-width: 2px;
+    border-color: aqua;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100px;
+    background-color: white;
+}
+.btn-loaduser{
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 3px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-width: 2px;
+    border-style: groove;
+    border-color: aqua;
+    box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.4);
+    text-decoration: none;
+    cursor: pointer;
+    height: 20px;
+}
+#load-l{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#contraseña{
+    margin-bottom: 20px;
+}
+.label-10{
+    margin-bottom: 10px;
+}
+.text-box{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    overflow-y: scroll;
+    background-color: white;
+    border-style: groove;
+    text-align: left;
+    height: 100px;
+}
+.option-s{
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+.option-s:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.315);
+    color: white;
+}
+.searchbar-1{
+    width: 50%;
+    border-color: black;
+    height: 30%;
+    border-style: groove;
+    border-radius: 10px 10px 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.search-button{
+    position: absolute;
+    width: 8%;
+    top: 20%;
+    right: 19%;
+}
+/*------------------------------------------MEDIA QUERYS PARA EL CAMBIO DE DISPOSITIVO------------------------------------------------------*/

@@ -1,0 +1,214 @@
+@keyframes anim_imageA{
+    0%{
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes anim_imageB{
+    0%{
+        height: 20%;
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes anim_element_one{
+
+    0%{
+        transform: translateY(99%);
+    }
+    25%{
+        transform: translateY(50%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    75%{
+        transform: translateY(15%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+@keyframes anim_login_block{
+    0%{
+        transform: translate(-50%, -200%);
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+        background-color: black;
+    }
+}
+/*---------------------------------------------------SET DE HEADER Y DEMAS---------------------------------------------------------------*/
+#body_index{
+    background: linear-gradient(to bottom, rgba(153, 213, 247, 0.993), #ffff);
+}
+.header{
+    background: linear-gradient(to bottom, rgba(8, 163, 253, 0.993), #ffff);
+    height: 100px;
+}
+#logo{
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 50px;
+}
+#logo img{
+    width: 100px;
+    border-radius: 100px;
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    left: -40px;
+}
+/*----------------------------------------------------------IMAGENES BACKGROUND 1 Y 2---------------------------------------------------------------------------*/
+#IMG1{
+    position: absolute;
+    width: 100%;
+    max-width: 100vw;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    max-height: 100vw;
+    animation:  anim_imageB 1s ease-in 1;
+}
+#IMG2{
+    position: absolute;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    max-height: 100vw;
+    z-index: -1;
+    animation: anim_imageA 1s ease-in 1;
+}
+/*------------------------------------------------------- COMIENZO DE LOGIN NUEVO ------------------------------------------------------*/
+.login{
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 10px 16px 10px rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    animation: anim_login_block 1s ease-in 1;
+}
+.login-form input{
+    color: rgb(3, 0, 0);
+    margin: 5px;
+    text-align: center;
+}
+.log-in-button{
+    text-align: center;
+    padding: 4px;
+    margin: 3px;
+}
+.error{
+    padding: 3px;
+    background-color: rgba(255, 0, 0, 0.671);
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    text-align: center;
+}
+.alert{
+    padding: 3px;
+    background-color: rgba(84, 245, 103, 0.876);
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    text-align: center;
+}
+/*-------------------------------------------------------COMIENZO DE MENU MAIN, RENOVADO-------------------------------------------------*/
+.optn-menu{/*ESTO ACTUA COMO CONTENEDOR DE MI GRID*/
+    display: grid;
+    grid-template-columns: 170fr 170fr 170fr 170fr;
+    grid-gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    align-items: center;
+}
+.optn-item{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: width 0.5s, background-color 0.5s, box-shadow 0.5s, height 0.5s, cursor 0.0s;
+    overflow: hidden;
+}
+.optn-item a{
+    text-decoration: none;
+    font-family:'Libre Franklin', sans-serif;
+    padding-top: 5px;
+    padding-left: 2px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+.optn-item:hover{
+    width: 180px;
+    height: 100px;
+    background-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 6px 7px 4px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.dropdwn-display{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    width: 25%;
+    left: 74%;
+    cursor: default;
+    overflow: hidden;
+    clip-path: inset(0);
+    flex-direction: column;
+}
+
+.dropdwn-item-s{
+    margin-bottom: 20px;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: width 0.5s, background-color 0.5s, box-shadow 0.5s;
+    overflow: hidden;
+}
+.dropdwn-item-s:hover{
+    width: 155px;
+    background-color: rgba(116, 237, 253, 0.884);
+    box-shadow: 6px 7px 4px 4px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.optn-item:hover .dropdwn-display{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    top: 99%;
+    animation: anim_element_one 1s ease-in 1;
+    overflow: hidden;
+    clip-path: inset(0);
+}
