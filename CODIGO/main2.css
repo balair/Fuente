@@ -1,24 +1,20 @@
 @keyframes anim_imageA{
     0%{
-        height: 20%;
-        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
     }
     50%{
-        height: 50%;
-    }
-    100%{
-        height: 100%;
+        opacity: 1;
     }
 }
 @keyframes anim_imageB{
     0%{
-        height: 20%;
+        opacity: 0;
     }
-    50%{
-        height: 50%;
+    40%{
+        opacity: 0.5;
     }
     100%{
-        height: 100%;
+        opacity: 1;
     }
 }
 @keyframes anim_element_one{
@@ -91,7 +87,7 @@
     right: 0%;
     max-height: 100vw;
     z-index: -1;
-    animation: anim_imageA 1s ease-in 1;
+    animation: anim_imageA 5s ease-in 1;
 }
 /*------------------------------------------------------- COMIENZO DE LOGIN NUEVO ------------------------------------------------------*/
 .login{
@@ -106,7 +102,7 @@
     box-shadow: 10px 16px 10px rgb(0, 0, 0, 0.6);
     border-radius: 5px;
     transform: translate(-50%, -50%);
-    animation: anim_login_block 1s ease-in 1;
+    animation: anim_login_block 2s ease-in 1;
 }
 .login-form input{
     color: rgb(3, 0, 0);
